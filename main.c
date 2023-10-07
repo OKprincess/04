@@ -1,6 +1,6 @@
 //
 //  main.c
-//  04_P5
+//  04_P6
 //
 //  Created by ok sojoung on 2023/10/05.
 //
@@ -9,21 +9,17 @@
 #include <stdlib.h>
 
 int main(void) {
-    unsigned int x;
-    int b;
+    int input;
+    int sec, min, hour;
     
-    printf("input a number :");
-    scanf("%ui", &x);
+    printf("input second:");
+    scanf("%d", &input);
     
-    for (b=0; x!=0; x >>= 1)
-    {
-        if(x&1)
-        {
-            b++;
-        }
-    }
+    sec     = input%60;
+    min     = (input%3600)/60;
+    hour    = input/3600;
     
-    printf("The result is %i\n",b);
+    printf("The time %d : %d : %d\n", hour, min, sec);
     
     return 0;
 }
