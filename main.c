@@ -1,6 +1,6 @@
 //
 //  main.c
-//  04_P2
+//  04_P3
 //
 //  Created by ok sojoung on 2023/10/05.
 //
@@ -9,23 +9,16 @@
 #include <stdlib.h>
 
 int main(void) {
-    int a, b;
-    int sum, diff, mul, por, rest;
+    int input;
+    int sec, min;
     
-    printf("input two integers :");
-    scanf("%i %i", &a, &b);
+    printf("input second:");
+    scanf("%d", &input);
     
-    sum     = a+b;
-    diff    = a-b;
-    mul     = a*b;
-    por     = a/b;
-    rest    = a%b;
+    sec     = input%60;
+    min     = input/60;
     
-    printf("+ result is %d.\n", sum);
-    printf("- result is %d.\n", diff);
-    printf("* result is %d.\n", mul);
-    printf("/ result is %d.\n", por);
-    printf("%% result is %d.\n", rest);
+    printf("The time is %d : %d\n",min, sec);
     
     return 0;
 }
