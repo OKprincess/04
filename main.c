@@ -1,6 +1,6 @@
 //
 //  main.c
-//  04_P3
+//  04_P4
 //
 //  Created by ok sojoung on 2023/10/05.
 //
@@ -9,16 +9,15 @@
 #include <stdlib.h>
 
 int main(void) {
-    int input;
-    int sec, min;
+    int year;
     
-    printf("input second:");
-    scanf("%d", &input);
+    printf("input a year:");
+    scanf("%d", &year);
     
-    sec     = input%60;
-    min     = input/60;
-    
-    printf("The time is %d : %d\n",min, sec);
+    if ( (year%4==0 && year%100!=0) || year%400==0 )
+        printf("This is leap year\n");
+    else
+        printf("This is not leap year\n");
     
     return 0;
 }
